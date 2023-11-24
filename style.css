@@ -1,0 +1,264 @@
+:root{
+  --light: #E2E2E2;
+  --primary: rgb(9, 9, 71);
+  --secondary: rgb(70, 70, 55);
+  --blue: #34888C;
+  --teatyg: #7CAA2D;
+  --stile: #F5E356;
+  --seeds: #CB6318;
+  --deep: #0F1B07;
+  --white: #FFFFFF;
+  --plants: #5C831A;
+  --new: #C6D166;
+  
+}
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+}
+/* Inicio de la parte del encabezado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  padding: 10px 12px;
+  z-index: 888; /* Para mantener el header por encima del resto del contenido */
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+p{
+color:black;
+}
+body{
+  background-color: whitesmoke;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, arial; 
+  margin-top: 100px;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+h1 {
+  color:#FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contenedorCards{
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+.card-header{
+  height: 200px;
+  width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+.card-title{
+  text-align: center;
+  margin: 0;
+}
+.card-description{
+  flex-grow: 1;
+}
+.card-header img{
+  border-radius: 10px 10px 0 0;
+}
+.card-body{
+  border-radius: 0 0 10px 10px;
+  background-color:#FFFFFF;
+  padding: 20px 15px;
+  text-align: justify;
+  border: 1px solid black;
+}
+.btn{
+  display: block;
+  background-color: var(--secondary);
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+@media(min-width: 480px){
+  .contenedorCards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:  10px;
+  }
+  .card{
+      display: flex;
+      flex-direction: column;
+  }
+  .card-body{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+  }
+}
+.containerSlider{
+  width: 100%; /* TAMAÑO HORIZONTAL (100 es el mejor) */
+  overflow-x: hidden;
+  margin:auto;
+}
+
+.slider{
+  position: relative;
+  width: 500%; /* ancho vertical */
+  animation: animate 20s linear infinite;
+}
+
+.slide{
+  position: relative;
+  width: 20%; /* esto esconde las otras imagenes xd */
+  float: left;
+  height: 65vh; 
+}
+
+.textoSlider{
+  margin: 50px;
+  padding: 0 6rem ;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align:left ;
+  font-size: 6em;
+  width: 100%;
+  background: rgba(0,0,0,.6); /* por si quieres ponerle la linea en negro o no */
+  color: #fff;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; /* Fuente del Texto en sima de la imagen */
+}
+
+.slide{
+  background-size: cover;
+}
+
+.slide:nth-child(1){
+  background: url(imagenes/CBT/1.jpg.jpeg); /* Estos recuadros son para poner las imagenes ya sea por URL o por ruta */
+}
+
+.slide:nth-child(2){
+  background: url(imagenes/CBT/3.jpg.jpeg);
+}
+
+.slide:nth-child(3){
+  background: url(imagenes/CBT/4.jpg.jpeg);
+}
+
+.slide:nth-child(4){
+  background: url(imagenes/DELEGACION/2.jpg.jpeg);
+}
+
+.slide:nth-child(5){
+  background: url(imagenes/DELEGACION/8.jpg.jpeg);
+}
+
+@keyframes animate{
+  0%{
+    left: 0;
+  }
+  16%{
+    left: 0;
+  }
+  20%{
+    left: -100%;
+  }
+  36%{
+     left: -100%;
+  }
+  40%{
+    left: -200%;
+  }
+  56%{
+    left: -200%;
+  }
+  60%{
+    left: -300%;
+  }
+  76%{
+    left: -300%;
+  }
+  80%{
+    left: -400%;
+  }
+  96%{
+    left: -400%;
+  }
+  100%{
+    left: 0;
+  }
+}
+nav a{
+  font-weight: 600;
+  padding-right: 10px;
+}
+nav a:hover{
+  color: lawngreen;
+}
+a{
+  font-weight: 600;
+  padding-right: 10px;
+}
+a:hover{
+color: lawngreen;
+}
+
+
+.footerContent{
+  width: 850px; 
+  margin: auto;
+
+}
+
+
+.fixed_footer{
+  width: 100%;
+  height: 160px;
+  background: #111;
+  position: absolute;
+  display: flex;
+  align-items: center;
+ 
+}
+.fixed_footer p{
+ color: #696969;
+ column-count: 1;
+ column-gap: 50px;
+ font-size: 1.2em;
+ font-weight: 300;
+ text-align: center;
+}
